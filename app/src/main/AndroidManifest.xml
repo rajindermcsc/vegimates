@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.websoftquality.vegimate">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        tools:remove="android:maxSdkVersion" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="com.quickblox.sample.messages.permission.C2D_MESSAGE" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission
+        android:name="android.permission.READ_PHONE_STATE"
+        tools:node="remove" />
+    <uses-permission android:name="com.android.vending.BILLING" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+
+    <application
+        android:name=".configs.AppController"
+        android:allowBackup="true"
+        android:hardwareAccelerated="true"
+        android:icon="@drawable/appicon"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true"
+        tools:replace="android:allowBackup">
+
+        <activity android:name=".HomeActivity"
+            android:theme="@style/HomeTheme"/>
+        <activity android:name=".views.profile.AdvancedSettings"></activity>
+        <activity android:name=".views.main.StripeCardPaymentActivity" /> <!-- android:launchMode="singleTask" -->
+        <activity
+            android:name=".views.main.SplashActivity"
+            android:noHistory="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/SplashTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <!--
+        <activity
+            android:name="com.websoftquality.gofriend.iaputils.MainActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:noHistory="true"
+            android:theme="@style/SplashTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        -->
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@drawable/appicon" />
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@color/color_accent" />
+
+        <activity
+            android:name=".views.main.HomeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoTransulent" />
+        <activity
+            android:name=".views.main.LoginActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoTransulent" />
+
+
+        <activity
+            android:name=".views.signup.SignUpActivity"
+            android:configChanges="keyboard|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoTransulent"
+            android:windowSoftInputMode="stateAlwaysVisible|adjustResize" />
+        <activity
+            android:name=".views.signup.CountryCodeActivity"
+            android:label="Select your country"
+            android:noHistory="true"
+            android:theme="@android:style/Theme.Holo.Light.Dialog" />
+        <activity
+            android:name=".views.profile.SettingsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoTransulent" />
+        <activity
+            android:name=".views.profile.EditProfileActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoTransulent"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name=".views.profile.EnlargeProfileActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoTransulent" />
+        <activity
+            android:name=".views.chat.MatchUsersActivity"
+            android:theme="@style/Theme_dialog" />
+        <activity
+            android:name=".views.profile.GetIgniterPlusActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoTransulent" />
+        <activity
+            android:name=".views.chat.CreateGroupActivity"
+            android:theme="@style/Theme_dialog" /> <!-- android:configChanges="keyboard|keyboardHidden|orientation|screenSize" -->
+        <activity
+            android:name=".views.chat.ChatConversationActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoTransulent"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.obs.image_cropping.CropImageActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.imageCrop" />
+        <activity
+            android:name=".views.main.IgniterPlusDialogActivity"
+            android:theme="@style/Theme_dialog" />
+        <activity
+            android:name=".views.main.IgniterGoldActivity"
+            android:noHistory="true"
+            android:theme="@style/Theme_dialog" />
+        <activity
+            android:name=".views.main.BoostDialogActivity"
+            android:noHistory="true"
+            android:theme="@style/Theme_dialog" />
+        <activity
+            android:name=".views.main.UserNameActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoTransulent" />
+        <activity
+            android:name=".views.main.VerificationActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoTransulent" />
+        <activity
+            android:name=".views.profile.AddLocationActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoTransulent" />
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+        <meta-data
+            android:name="com.facebook.accountkit.ApplicationName"
+            android:value="@string/app_name" />
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+
+        <activity
+            android:name="com.facebook.accountkit.ui.AccountKitActivity"
+            android:theme="@style/AppLoginTheme"
+            tools:replace="android:theme" />
+        <activity
+            android:name="com.facebook.FacebookActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.facebook.CustomTabActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="@string/fb_login_protocol_scheme" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="com.facebook.accountkit.ClientToken"
+            android:value="@string/ACCOUNT_KIT_CLIENT_TOKEN" />
+
+        <activity
+            android:name=".views.main.AccountKit.TwilioAccountKitActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoTransulent" />
+        <activity
+            android:name=".likedusers.LikedUsersActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoTransulent" />
+
+        <activity android:name=".CallScreenActivity" />
+        <activity android:name=".PlaceCallActivity" />
+        <activity android:name=".IncomingCallScreenActivity" />
+
+
+        <!--        <service android:name=".Notifications.MyFirebaseMessaging"-->
+        <!--            >-->
+        <!--            <intent-filter>-->
+        <!--                <action android:name="com.google.firebase.MESSAGING_EVENT"/>-->
+        <!--            </intent-filter>-->
+        <!--        </service>-->
+        <service android:name=".SinchService" />
+        <!--
+<meta-data
+            android:name="com.websoftquality.gofriend.utils.MyGlideModule"
+            android:value="GlideModule" />
+        -->
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+
+        <service
+            android:name=".pushnotification.MyFirebaseMessagingService"
+            android:theme="@style/Theme.AppCompat">
+            <intent-filter>
+                <action
+                    android:name="com.google.firebase.MESSAGING_EVENT"
+                    android:theme="@style/Theme.AppCompat" />
+            </intent-filter>
+        </service>
+        <service
+            android:name=".pushnotification.MyFirebaseInstanceIDService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+    </application>
+
+</manifest>

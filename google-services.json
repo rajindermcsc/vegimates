@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "368049320671",
+    "firebase_url": "https://datingapp-78697.firebaseio.com",
+    "project_id": "datingapp-78697",
+    "storage_bucket": "datingapp-78697.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:368049320671:android:9e369edf2f1e5951566f6a",
+        "android_client_info": {
+          "package_name": "com.websoftquality.vegimate"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "368049320671-ee3ga1l9sjt15d780e37b9qab1dsf0a8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB6UMbBzvOGuNZI7ff7gXrUkd-fJ0dY91k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "368049320671-563o5rum55oe45r28b32iehtvpq4lclf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
